@@ -15,7 +15,7 @@ echo -e "\e[36m creating catalogue service file \e[om"
 cp /root/roboshop/catalogue.service /etc/systemd/system/catalogue.service
 systemctl daemon-reload
 echo -e "\e[36m downloading and loading the mongodb schema \e[om"
-cp /root/roboshop/mongo.repi /etc/yum.repos.d/mongodb.repo
+cp /root/roboshop/mongo.repo /etc/yum.repos.d/mongodb.repo
 yum install mongodb-org-shell -y
 mongo --host mongodb.srineeth.tech </app/schema/catalogue.js
 echo -e "\e[36m enabling and restaring the catalogue service \e[om"
