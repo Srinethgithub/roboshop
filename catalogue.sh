@@ -13,11 +13,11 @@ rm -rf catalogue.zip
 npm install
 echo -e "\e[36m creating catalogue service file \e[om"
 cp /root/roboshop/catalogue.service /etc/systemd/system/catalogue.service
-systemctl daemon-reload
 echo -e "\e[36m downloading and loading the mongodb schema \e[om"
 cp /root/roboshop/mongodb.repos  /etc/yum.repos.d/mongo.repo
 yum install mongodb-org-shell -y
-mongo --host mongodb.srineeth.tech </app/schema/catalogue.js
+mongo --host mongodb.srineeth.tech < /app/schema/catalogue.js
 echo -e "\e[36m enabling and restaring the catalogue service \e[om"
+systemctl daemon-reload
 systemctl enable catalogue
 systemctl restart catalogue
