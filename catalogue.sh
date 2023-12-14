@@ -9,7 +9,6 @@ cd /app
 echo -e "\e[36m downloading new app content and there dependencies \e[om"
 curl -O https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 unzip catalogue.zip
-rm -rf catalogue.zip
 npm install
 echo -e "\e[36m creating catalogue service file \e[om"
 cp /root/roboshop/catalogue.service /etc/systemd/system/catalogue.service
