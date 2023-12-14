@@ -16,7 +16,7 @@ cp /root/roboshop/catalogue.service /etc/systemd/system/catalogue.service
 echo -e "\e[31m downloading and loading the mongodb schema \e[0m"
 cp /root/roboshop/mongodb.repos  /etc/yum.repos.d/mongo.repo
 yum install mongodb-org-shell -y
-mongo --host mongodb.srineeth.tech < /app/schema/catalogue.js
+mongo --host mongodb.srineeth.tech </app/schema/catalogue.js
 echo -e "\e[31m enabling and restaring the catalogue service \e[0m"
 systemctl daemon-reload
 systemctl enable catalogue
