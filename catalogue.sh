@@ -3,7 +3,7 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 echo -e "\e[36m installing nodejs \e[om"
 yum install nodejs -y
 echo -e "\e[36m adding user and path \e[om"
-mkdir roboshop/
+mkdir roboshop
 mkdir /app
 cd /app
 echo -e "\e[36m downloading new app content and there dependencies \e[om"
