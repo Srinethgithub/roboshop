@@ -1,5 +1,5 @@
 echo -e "\e[36m downloding nodejs repo \e[0m"
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+curl -sL https://rpm.nodesource.com/setup_19.x|sudo -E bash
 echo -e "\e[31m installing nodejs \e[0m"
 yum install nodejs -y
 echo -e "\e[36m adding user and path \e[0m"
@@ -7,7 +7,7 @@ useradd roboshop
 mkdir /app
 cd /app
 echo -e "\e[36m downloading new app content and there dependencies \e[0m"
-curl -sL https://rpm.nodesource.com/setup_19.x|sudo -E bash
+curl -O  https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 unzip catalogue.zip
 rm -rf catalogue.zip
 npm install
